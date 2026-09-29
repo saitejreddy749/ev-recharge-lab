@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+:root {
+  --background: #fff; --foreground: #142b32; --card: #fff; --card-foreground: #142b32;
+  --popover: #fff; --popover-foreground: #142b32; --primary: #0f5947;
+  --primary-foreground: #fff; --secondary: #eef5f1; --secondary-foreground: #214b3e;
+  --muted: #edf3ef; --muted-foreground: #657d77; --accent: #e6f3ea;
+  --accent-foreground: #1d5844; --destructive: #b44234; --border: #d7e2dc;
+  --input: #cadbd3; --ring: #67ac89; --radius: .8rem;
+}
+@theme inline {
+  --color-background: var(--background); --color-foreground: var(--foreground);
+  --color-card: var(--card); --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary); --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive); --color-border: var(--border);
+  --color-input: var(--input); --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px); --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius); --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+html { color-scheme: light; }
+body { font-family: Arial, Helvetica, sans-serif; }
+@layer components {
+  .panel { @apply rounded-2xl border border-[#d7e2dc] bg-white shadow-[0_10px_34px_rgba(31,66,55,0.05)]; }
+  .trip-input { @apply h-11 rounded-lg border-[#cadbd3] bg-[#fbfdfb] text-[15px]; }
+  .notice-green { @apply flex items-start gap-3 rounded-xl border border-[#acd5bc] bg-[#e8f7ed] p-4 text-sm text-[#1b5d43]; }
+}
